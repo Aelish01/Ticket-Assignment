@@ -1,0 +1,121 @@
+<p-toast></p-toast>
+
+<p-dialog
+  header="Header"
+  [(visible)]="isVisibleModel"
+  class="updateDilog"
+  (onHide)="addEditcloseModel('')"
+>
+  <ng-template pTemplate="header">
+    <span class="text-xl font-bold" *ngIf="!isEditID">Add Ticket</span>
+    <span class="text-xl font-bold" *ngIf="isEditID">Edit Ticket </span>
+  </ng-template>
+  <div>
+    <form [formGroup]="editForm">
+      <div>
+        <div>
+          <label class="formTitle" for="field_title"
+            >First Name <span class="requreStar">*</span></label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="title"
+            id="field_title"
+            data-cy="title"
+            formControlName="title"
+            [ngClass]="{
+              'is-invalid': isSaving && editForm.controls['title'].errors
+            }"
+            pInputText
+          />
+          <div
+            class="errorWrap text-danger"
+            *ngIf="isSaving && editForm.controls['title'].errors"
+          >
+            title is required.
+          </div>
+        </div>
+        <div style="margin-top: 1rem">
+          <label class="formTitle" for="field_title"
+            >Description <span class="requreStar">*</span></label
+          >
+          <textarea
+            rows="5"
+            class="form-control"
+            [ngClass]="{
+              'is-invalid': isSaving && editForm.controls['description'].errors
+            }"
+            pInputTextarea
+            cols="30"
+            pInputTextarea
+            formControlName="description"
+          ></textarea>
+
+          <div
+            class="errorWrap text-danger"
+            *ngIf="isSaving && editForm.controls['description'].errors"
+          >
+            Description is required.
+          </div>
+        </div>
+
+        <div style="margin-top: 1rem">
+          <label class="formTitle"
+            >Service : <span class="requreStar">*</span></label
+          >
+          <p-dropdown
+            [options]="statusList"
+            optionLabel="name"
+            optionValue="name"
+            placeholder="Select a Service"
+            [filter]="true"
+            filterBy="name"
+            formControlName="status"
+            [ngClass]="{
+              'is-invalid': isSaving && editForm.controls['status'].errors
+            }"
+            appendTo="body"
+          ></p-dropdown>
+          <div></div>
+          <div
+            *ngIf="isSaving && editForm.controls['status'].errors"
+            class="errorWrap text-danger"
+          >
+            <div class="error text-danger">Service is required.</div>
+          </div>
+        </div>
+        <div style="margin-top: 1rem">
+          <label class="formTitle"
+            >Priority : <span class="requreStar">*</span></label
+          >
+          <p-dropdown
+            [options]="priorityList"
+            optionLabel="name"
+            optionValue="name"
+            placeholder="Select a Service"
+            [filter]="true"
+            filterBy="name"
+            formControlName="priority"
+            [ngClass]="{
+              'is-invalid': isSaving && editForm.controls['priority'].errors
+            }"
+            appendTo="body"
+          ></p-dropdown>
+          <div></div>
+          <div
+            *ngIf="isSaving && editForm.controls['priority'].errors"
+            class="errorWrap text-danger"
+          >
+            <div class="error text-danger">Service is required.</div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+  <ng-template pTemplate="footer">
+    <div class="dCenterflex">
+      <p-button (click)="save()">Save </p-button>
+    </div>
+  </ng-template>
+</p-dialog>

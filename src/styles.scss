@@ -1,1 +1,327 @@
-/* You can add global styles to this file, and also import other style files */
+// @import "bootstrap-variables";
+// @import "bootstrap/scss/functions";
+// @import "bootstrap/scss/variables";
+
+@import "primeng/resources/themes/lara-light-blue/theme.css";
+@import "primeng/resources/primeng.css";
+@import "primeicons/primeicons.css";
+
+.mainContain {
+    margin: 1.5rem;
+    box-shadow:
+        0px 1.13px 67.56px -2.25px #18274b0f,
+        0px 3.38px 22.52px -3.38px #18274b0f;
+}
+//table Css
+
+.addbutton {
+    width: 24px !important;
+    height: 24px !important;
+    border-radius: 2.93px !important;
+    background: #1e9296 !important;
+    span {
+        font-size: 10px !important;
+        color: white !important;
+    }
+}
+.actionbtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .onlyIconBtn {
+        background: transparent !important;
+        width: fit-content !important;
+        padding: 2px !important;
+        border: none !important;
+    }
+}
+.tableheader {
+    font-family: "Montserrat";
+    font-size: 16.63px;
+    font-weight: 600;
+    line-height: 20.27px;
+    letter-spacing: 0.01em;
+    color: #818181;
+    img {
+        width: 22px;
+        height: 22px;
+        filter: grayscale(09) brightness(0.01) contrast(0) !important;
+    }
+}
+.p-datatable {
+    .p-datatable-header {
+        background: transparent !important;
+        border: none !important;
+        border-width: 1px 0 1px 0;
+    }
+
+    .table-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+.p-datatable .p-datatable-thead > tr {
+    // border-bottom: 0.98px solid #00000026 !important;
+}
+.p-datatable .p-datatable-tbody > tr {
+    border-bottom: 0.98px dashed #00000026 !important;
+}
+.p-datatable .p-datatable-thead > tr.filterRow > th {
+    background: transparent !important;
+    border-bottom: 0.98px solid #00000026 !important;
+}
+.p-datatable .p-datatable-thead > tr > th {
+    font-family: "Nunito" !important;
+    font-size: 16.63px !important;
+    font-weight: 600 !important;
+    line-height: 22.68px !important;
+    letter-spacing: 0.03em !important;
+    color: #383838 !important;
+    background: #e9f4f5;
+}
+.p-datatable .p-datatable-tbody > tr > td {
+    font-family: "Nunito" !important;
+    font-size: 15.65px !important;
+    font-weight: 600 !important;
+    line-height: 21.52px !important;
+    letter-spacing: 0.03em !important;
+    color: #434343cc !important;
+
+    .imgPlace {
+        width: 47px !important;
+        height: 63px !important;
+    }
+    .imgcenter {
+        width: 47px !important;
+        height: 63px !important;
+    }
+    .imageProvider {
+        width: 40px;
+        height: 40px;
+        border-radius: 3px;
+    }
+    i {
+        color: #48adff !important;
+    }
+    fa-icon svg path {
+        fill: #48adff !important;
+    }
+}
+
+// pagination
+.p-d-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .showPage {
+        font-family: "Montserrat";
+        font-size: 13.69px;
+        font-weight: 500;
+        line-height: 16.69px;
+        letter-spacing: 0.01em;
+        padding: 1rem !important;
+        color: #adadad;
+    }
+
+    .p-paginator {
+        .p-paginator-first,
+        .p-paginator-prev,
+        .p-paginator-next,
+        .p-paginator-last {
+            color: #44a4a6 !important;
+            font-family: "Nunito";
+            font-size: 14.67px;
+            font-weight: 600;
+            line-height: 20.01px;
+            letter-spacing: 0.01em;
+        }
+        .p-disabled,
+        .p-disabled * {
+            font-family: "Montserrat";
+            font-size: 13.69px;
+            font-weight: 500;
+            line-height: 16.69px;
+            letter-spacing: 0.01em;
+
+            color: #757575 !important;
+            cursor: default !important;
+            pointer-events: none;
+        }
+
+        .p-paginator-prev::after {
+            content: "Previous";
+            margin-right: 1rem;
+        }
+
+        .p-paginator-next::after {
+            content: "Next";
+            margin-left: 1rem;
+        }
+        button {
+            .p-icon-wrapper {
+                display: none !important;
+            }
+        }
+        .p-dropdown {
+            margin-left: 1rem;
+            margin-right: 0rem;
+            height: 25px;
+            margin-top: 3px;
+            border: 0.89px;
+            border: 0.89px solid #00000026;
+
+            .p-dropdown-label {
+                font-family: "Montserrat";
+                font-size: 13.42px;
+                font-weight: 600;
+                line-height: 16.36px;
+                letter-spacing: 0.01em;
+                text-align: left;
+                color: #44a4a6;
+                padding: 4px 8px !important;
+            }
+        }
+    }
+}
+
+.p-paginator .p-paginator-pages .p-paginator-page.p-highlight {
+    background: #44a4a6 !important;
+    color: white !important;
+    min-width: 23.48px !important;
+    height: 22.5px !important;
+    border-radius: 2.93px !important;
+    font-family: Montserrat;
+    font-size: 13.69px;
+    font-weight: 500;
+    line-height: 16.69px;
+    letter-spacing: 0.01em;
+}
+
+// form
+.formTitle {
+    font-family: Nunito;
+    font-size: 16.63px;
+    font-weight: 600;
+    line-height: 22.68px;
+    letter-spacing: 0.01em;
+    text-align: left;
+    color: #818181;
+}
+
+.form-control {
+    border-radius: 3.86px !important;
+    border: 1.29px solid #d1d1d199 !important;
+    background: #ffffff !important;
+    font-family: "Nunito";
+    font-size: 15.44px;
+    font-weight: 500;
+    line-height: 21.06px;
+    letter-spacing: 0.02em;
+    text-align: left;
+    color: #191919;
+}
+
+input {
+    height: 40.39px !important;
+}
+textarea {
+    height: 113.59px !important;
+}
+.btn {
+    .p-button {
+        height: 45.44px !important;
+        border-radius: 6.5px !important;
+        background: #1e9296 !important;
+        font-family: "Nunito" !important;
+        font-size: 17.35px !important;
+        font-weight: 700 !important;
+        line-height: 23.66px !important;
+        letter-spacing: 0.02em !important;
+        color: #ffffff !important;
+    }
+}
+.cancelbtn {
+    .p-button {
+        height: 45.44px !important;
+        border-radius: 6.5px !important;
+        background: #dc3731 !important;
+        font-family: "Nunito" !important;
+        font-size: 17.35px !important;
+        font-weight: 700 !important;
+        line-height: 23.66px !important;
+        letter-spacing: 0.02em !important;
+        color: #ffffff !important;
+    }
+}
+
+.viewBtn {
+    .p-button {
+        height: 45.44px !important;
+        border-radius: 6.5px !important;
+        background: transparent !important;
+        font-family: "Nunito" !important;
+        font-size: 12px !important;
+        font-weight: 500 !important;
+        line-height: 16.36px !important;
+        letter-spacing: 0.02em !important;
+        color: #a05bf8 !important;
+    }
+}
+.editBtn {
+    .p-button {
+        height: 45.44px !important;
+        border-radius: 6.5px !important;
+        background: transparent !important;
+        font-family: "Nunito" !important;
+        font-size: 12px !important;
+        font-weight: 500 !important;
+        line-height: 16.36px !important;
+        letter-spacing: 0.02em !important;
+        color: #24a3fe !important;
+    }
+}
+.deleteBtn {
+    .p-button {
+        height: 45.44px !important;
+        border-radius: 6.5px !important;
+        background: transparent !important;
+        font-family: "Nunito" !important;
+        font-size: 12px !important;
+        font-weight: 500 !important;
+        line-height: 16.36px !important;
+        letter-spacing: 0.02em !important;
+        color: #fb4242 !important;
+    }
+}
+.requreStar{    
+    color: red !important;
+    font-size: 13px !important;
+}
+.is-invalid {
+    border-color: red;
+}
+.text-danger {
+    color: red !important;
+    font-size: 13px !important;
+    font-weight: 500 !important;
+    font-family: "Inter", sans-serif;
+}
+
+.p-inputtext {
+    font-size: 13px !important;
+    width: 100% !important;
+    // height: 37.06px;
+}
+
+.p-dropdown {
+    width: 100%;
+    // height: 32px !important;
+    background: #fcfcfc !important;
+    box-shadow: 0px 1px 2px 0 rgb(0 0 0 / 10%) !important;
+    border-color: #eaeaea !important;
+}
+
+.p-dropdown .p-dropdown-label.p-placeholder {
+    color: #999 !important;
+}
