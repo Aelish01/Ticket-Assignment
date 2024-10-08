@@ -1,3 +1,9 @@
+# My Angular Project
+
+You can run this project live on StackBlitz:
+
+[Run on StackBlitz](https://stackblitz.com/github/Aelish01/Ticket-Assignment)
+
 # Myapp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.5.
