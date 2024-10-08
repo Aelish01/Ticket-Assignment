@@ -57,7 +57,7 @@ export class AddeditticketComponent implements OnInit {
     public ticketService: TicketService,
   ) {
     if (this.isEditID) {
-      debugger
+      
       console.log('this.isEditID', this.isEditID)
       this.editSetData()
     }
@@ -81,7 +81,7 @@ export class AddeditticketComponent implements OnInit {
   editSetData() {
     let data: any
     this.editData = data
-    debugger
+    
     data = this.ticketService.TicketList.filter(
       (e: any) => e.id === this.isEditID,
     )
