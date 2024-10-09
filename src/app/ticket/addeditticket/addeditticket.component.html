@@ -15,7 +15,7 @@
       <div>
         <div>
           <label class="formTitle" for="field_title"
-            >First Name <span class="requreStar">*</span></label
+            >Title <span class="requreStar">*</span></label
           >
           <input
             type="text"
@@ -33,7 +33,7 @@
             class="errorWrap text-danger"
             *ngIf="isSaving && editForm.controls['title'].errors"
           >
-            title is required.
+            Title is required.
           </div>
         </div>
         <div style="margin-top: 1rem">
@@ -107,7 +107,7 @@
             *ngIf="isSaving && editForm.controls['priority'].errors"
             class="errorWrap text-danger"
           >
-            <div class="error text-danger">Service is required.</div>
+            <div class="error text-danger">Priority is required.</div>
           </div>
         </div>
       </div>
